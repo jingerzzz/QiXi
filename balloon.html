@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-152420998-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-152420998-1');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Balloon - A First Prize Game</title>
+    <link rel="stylesheet" href="css/html5reset.css" >
+    <link rel="stylesheet" href="css/balloon.css" >
+<!--    <link rel="stylesheet" href="css/animation.css">-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" >
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://kit.fontawesome.com/85ffd7a6f1.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+
+    <!--    favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="./icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./icon/favicon-16x16.png">
+
+
+    <!--    <link rel="manifest" href="./icon/site.webmanifest">-->
+</head>
+
+
+<body>
+
+<audio autoplay loop preload="auto">
+    <source src="sound/balloon/POL-pets-life-short.wav" type="audio/WAV">
+</audio>
+
+<div class="skipcont"><a href="#skip">Skip to Main Content</a></div>
+
+
+<div>
+
+<div id="intro_part">
+<div id="balloon_background">
+    <img id="balloon" src="imgs/balloon/balloon_sprite.gif" alt="balloon sprite">
+    <img id="logo" src="imgs/balloon/balloon_logo.png" alt="logo">
+    <p>A First Prize Game in Ann Arbor TurkeyJam 2019</p>
+
+<!--    apple store link-->
+    <a id="app_store" href="https://apps.apple.com/us/app/balloon-by-laforce/id1500200115?mt=8"></a>
+</div>
+
+
+
+    <div id="sound_on" ><i class="fas fa-volume-up" data-aos="fade-down" data-aos-duration="600"></i></div>
+    <div id="sound_off" style="display: none"><i class="fas fa-volume-mute" data-aos="fade-down" data-aos-duration="600"></i></div>
+
+    <!--    navigation bar-->
+    <nav data-aos="fade-down" data-aos-duration="600">
+
+        <ul>
+            <li><a href="index.html">Highlights</a></li>
+            <li><a href="drawings.html">Drawings</a></li>
+            <li><a href="games.html">Games</a></li>
+            <li><a href="about.html">About</a></li>
+
+        </ul>
+    </nav>
+
+</div>
+
+    <!--footer-->
+<footer>
+        <span>© Designed & Coded by Wenhui Zhao</span>
+</footer>
+
+<!--cursor-->
+    <div id="cursor"></div>
+
+</div>
+
+
+<!--aos init-->
+<script>
+    AOS.init({
+        // detect reduce motion here to stop AOS
+        disable: function () {
+            const query = '(prefers-reduced-motion: reduce)';
+            const hasOSReducedMotion = window.matchMedia(query).matches;
+            if(hasOSReducedMotion) return true;
+        }
+    });
+</script>
+
+<script>
+
+    // sound control
+    $("#sound_on").click(function () {
+        $("audio").get(0).pause();
+        $("#sound_off").toggle();
+        $("#sound_on").toggle();
+    });
+
+    $("#sound_off").click(function () {
+        $("audio").get(0).load();
+        $("#sound_off").toggle();
+        $("#sound_on").toggle();
+    });
+
+
+    // curosr
+
+    const cursor = document.querySelector('#cursor');
+
+    const editCursor = e => {
+        const { clientX: x, clientY: y } = e;
+        cursor.style.left = x + 'px';
+        cursor.style.top = y + 'px';
+    };
+
+    window.addEventListener('mousemove', editCursor);
+</script>
+
+</body>
+
+
+</html>

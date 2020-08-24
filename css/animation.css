@@ -1,0 +1,221 @@
+/*color reference*/
+/*red:#ff4d4d*/
+/*blue:#4db8ff*/
+/*yellow:#ff9933*/
+/*green:#00cc66*/
+
+/*intro_background_ani*/
+
+#ani_background{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    /*overflow: hidden;*/
+    /*background-color: #110f10;*/
+}
+
+@keyframes floating{
+    0%{
+        opacity: 0;
+        transform: translateY(0) rotate(0deg) ;
+    }
+    20%{
+        opacity: 50%;
+
+    }
+    40%{
+        opacity: 80%;
+    }
+    70%{
+        opacity: 50%;
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(-100vh) rotate(360deg) ;
+    }
+}
+
+#intro_part .circle li{
+
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    display: block;
+    list-style: none;
+    width: 5vw;
+    height: 5vw;
+    border-radius: 50%;
+    animation: floating 8s linear infinite;
+}
+
+#intro_part .circle li:nth-child(1){
+    left: 20vw;
+    background: #ff4d4d;
+    animation-delay: 1s;
+}
+
+#intro_part .circle li:nth-child(2){
+    width: 12vw;
+    height: 12vw;
+    left: 68vw;
+    background: #ff4d4d;
+    animation-delay: 3s;
+    animation-duration: 10s;
+
+}
+
+/*#intro_part .circle li:nth-child(3){*/
+/*    left: 60vw;*/
+/*    animation-delay: 5s;*/
+/*}*/
+
+/*#intro_part .circle li:nth-child(4){*/
+/*    left: 70vw;*/
+/*    animation-delay: 2s;*/
+/*}*/
+
+
+
+#intro_part .square li{
+     opacity: 0;
+     position: absolute;
+     bottom: 0;
+     display: block;
+     list-style: none;
+     width: 2vw;
+     height: 2vw;
+     background: #4db8ff;
+     animation: floating 10s linear infinite;
+ }
+
+#intro_part .square li:nth-child(1){
+    left: 5vw;
+    width: 4vw;
+    height: 4vw;
+    animation-delay: 5s;
+    animation-duration: 8s;
+}
+
+#intro_part .square li:nth-child(2){
+    left: 28vw;
+    width: 2vw;
+    height: 2vw;
+    animation-delay: 10s;
+    animation-duration: 11s;
+}
+
+#intro_part .square li:nth-child(3){
+    left: 56vw;
+    width: 1vw;
+    height: 1vw;
+    animation-delay: 6s;
+    animation-duration: 13s;
+}
+
+#intro_part .square li:nth-child(4){
+    left: 90vw;
+    width: 3vw;
+    height: 3vw;
+    animation-delay: 3s;
+    animation-duration: 9s;
+
+}
+
+
+#intro_part .triangle li{
+    width: 0;
+    height: 0;
+    border-left: 2vw solid transparent;
+    border-right: 2vw solid transparent;
+    border-bottom: 4vw solid #ff9933;
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    display: block;
+    list-style: none;
+    animation: floating 12s linear infinite;
+}
+
+#intro_part .triangle li:nth-child(1){
+    left: 45vw;
+    border-left: 4vw solid transparent;
+    border-right: 4vw solid transparent;
+    border-bottom: 8vw solid #ff9933;
+
+    animation-delay: 10s;
+    animation-duration: 12s;
+}
+
+#intro_part .triangle li:nth-child(2){
+    left: 60vw;
+
+    animation-delay: 1s;
+    animation-duration: 8s;
+}
+
+#intro_part .triangle li:nth-child(3){
+    left: 76vw;
+    animation-delay: 5s;
+}
+
+#intro_part .triangle li:nth-child(4){
+    left: 86vw;
+    animation-delay: 2s;
+}
+
+#intro_part .cross li{
+    background: #00cc66;
+    position: absolute;
+    height: 4vw;
+    width: 1.5vw;
+    opacity: 0;
+
+    bottom: 0;
+    display: block;
+    list-style: none;
+    animation: floating 15s linear infinite;
+}
+
+#intro_part .cross li:after {
+    background: #00cc66;
+    position: absolute;
+    content: "";
+    width: 4vw;
+    height: 1.5vw;
+    left: -1.25vw;
+    top: 1.25vw;
+}
+
+#intro_part .cross li:nth-child(1){
+    left: 41vw;
+    height: 3vw;
+    width: 1.2vw;
+    animation-delay: 3s;
+    animation-duration: 15s;
+}
+
+#intro_part .cross li:nth-child(1):after {
+    background: #00cc66;
+    position: absolute;
+    content: "";
+    width: 3vw;
+    height: 1.2vw;
+    left: -0.9vw;
+    top: 0.9vw;
+}
+
+#intro_part .cross li:nth-child(2){
+    left: 84vw;
+    animation-delay: 9s;
+    animation-duration: 10s;
+}
+
+#intro_part .cross li:nth-child(3){
+    left: 60vw;
+    animation-delay: 5s;
+}
+
+#intro_part .cross li:nth-child(4){
+    left: 70vw;
+    animation-delay: 2s;
+}

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-152420998-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-152420998-1');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wenhui Zhao's Personal Website Drawings</title>
+    <link rel="stylesheet" href="css/html5reset.css" >
+    <link rel="stylesheet" href="css/drawings.css" >
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" >
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://kit.fontawesome.com/85ffd7a6f1.js" crossorigin="anonymous"></script>
+    <!--    favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="./icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./icon/favicon-16x16.png">
+
+
+    <!--    <link rel="manifest" href="./icon/site.webmanifest">-->
+</head>
+
+<body>
+
+<div class="skipcont"><a href="#skip">Skip to Main Content</a></div>
+
+<!--    navigation bar-->
+
+<div>
+
+    <div id="intro_part">
+        <!--    navigation bar-->
+        <nav data-aos="fade-down" data-aos-duration="600">
+            <ul>
+                <li><a href="index.html">Projects</a></li>
+                <li><a class="current_page" style="color: rgb(124, 124, 124)">Drawings</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+
+        <div class="intro_text" id="skip" data-aos="fade-up" data-aos-duration="1600">
+            <p>This is my gallery!</p>
+        </div>
+    </div>
+
+
+
+            <div class="container">
+                <div class="column">
+                    <img data-aos="fade-up" alt="sketch1" data-aos-duration="1600" src="imgs/gallery/sketch/1.JPG">
+                    <img data-aos="fade-up" alt="sketch4" data-aos-duration="1600" src="imgs/gallery/sketch/2.JPG">
+                    <img data-aos="fade-up" alt="graphic design1" data-aos-duration="1600" src="imgs/gallery/graphic_design/graphic3.JPG">
+                    <img data-aos="fade-up" alt="graphic design2" data-aos-duration="1600" src="imgs/gallery/graphic_design/graphic4.JPG">
+
+                </div>
+                <div class="column">
+                    <img data-aos="fade-up" alt="sketch2" data-aos-duration="1600" src="imgs/gallery/sketch/5.JPG">
+                    <img data-aos="fade-up" alt="sketch5" data-aos-duration="1600" src="imgs/gallery/sketch/6.JPG">
+                    <img data-aos="fade-up" alt="sketch7" data-aos-duration="1600" src="imgs/gallery/sketch/7.JPG">
+                </div>
+                <div class="column">
+                    <img data-aos="fade-up" alt="sketch3" data-aos-duration="1600" src="imgs/gallery/sketch/3.JPG">
+                    <img data-aos="fade-up" alt="sketch6" data-aos-duration="1600" src="imgs/gallery/sketch/4.JPG">
+                    <img data-aos="fade-up" alt="graphic design3" data-aos-duration="1600" src="imgs/gallery/graphic_design/graphic1.JPG">
+                    <img data-aos="fade-up" alt="graphic design4" data-aos-duration="1600" src="imgs/gallery/graphic_design/graphic2.JPG">
+
+                </div>
+
+        </div>
+
+
+</div>
+
+
+
+
+<!--footer-->
+
+<footer>
+    <span>© 2019 Wenhui Zhao</span>
+</footer>
+
+
+<!--aos init-->
+<script>
+    AOS.init({
+        // detect reduce motion here to stop AOS
+        disable: function () {
+            const query = '(prefers-reduced-motion: reduce)';
+            const hasOSReducedMotion = window.matchMedia(query).matches;
+            if(hasOSReducedMotion) return true;
+        }
+    });
+</script>
+
+</body>
+</html>

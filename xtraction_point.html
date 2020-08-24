@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-152420998-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-152420998-1');
+    </script>
+
+
+
+    <!-- Magnific Popup core CSS file -->
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <!-- jQuery 1.7.2+ or Zepto.js 1.0+ -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Magnific Popup core JS file -->
+    <script src="js/jquery.magnific-popup.js"></script>
+
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Xtraction Point</title>
+    <link rel="stylesheet" href="css/html5reset.css" >
+    <link rel="stylesheet" href="css/xtraction_point.css" >
+<!--    <link rel="stylesheet" href="css/animation.css">-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" >
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!--    fontawesome-->
+    <script src="https://kit.fontawesome.com/85ffd7a6f1.js" crossorigin="anonymous"></script>
+
+
+
+    <!--    favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="./icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./icon/favicon-16x16.png">
+
+
+    <!--    <link rel="manifest" href="./icon/site.webmanifest">-->
+</head>
+
+
+<body>
+
+<audio autoplay loop preload="auto">
+    <source src="sound/xtraction_point/Space_Station_13_Music_Endless_Space.mp3" type="audio/mpeg">
+</audio>
+
+<div class="skipcont"><a href="#skip">Skip to Main Content</a></div>
+
+
+<div>
+
+<div id="intro_part">
+<div id="xtraction_point_intro">
+    <div id="background_container"><img id="xtraction_point_background" src="imgs/xtraction_point/xtraction_point_background.gif" alt="background"></div>
+    <div id="gradient"></div>
+    <img id="logo" src="imgs/xtraction_point/xtraction_point_logo.png" alt="logo">
+    <p>A Game By Laforce Interactive</p>
+
+
+
+<!--    function area-->
+    <div id="function_area">
+        <a id="trailer" class="popup-youtube" href="https://www.youtube.com/watch?v=oFcfcZ82Ixs"><i class="far fa-play-circle"></i><span>Trailer</span></a>
+        <div id="download">
+        <a  href="https://www.indiedb.com/games/xtraction-point/downloads/xtraction">
+        Download</a>
+<!--            <a href="https://www.indiedb.com/games/xtraction-point/downloads/xtraction" title="Download Xtraction - Indie DB" target="_blank"><img src="https://button.indiedb.com/download/medium/186354.png" alt="Xtraction" /></a>-->
+            <i class="fab fa-apple"></i>
+            <i class="fab fa-windows"></i>
+        </div>
+
+    </div>
+
+<!--    <iframe width="560" height="315" src="https://www.youtube.com/embed/oFcfcZ82Ixs"-->
+<!--            frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"-->
+<!--            allowfullscreen></iframe>-->
+<!--    apple store link-->
+<!--    <a id="app_store" href="https://apps.apple.com/us/app/balloon-by-laforce/id1500200115?mt=8"></a>-->
+</div>
+
+
+    <div id="sound_on" ><i class="fas fa-volume-up" data-aos="fade-down" data-aos-duration="600"></i></div>
+    <div id="sound_off" style="display: none"><i class="fas fa-volume-mute" data-aos="fade-down" data-aos-duration="600"></i></div>
+
+    <!--    navigation bar-->
+    <nav data-aos="fade-down" data-aos-duration="600">
+        <ul>
+            <li><a href="index.html">Highlights</a></li>
+            <li><a href="drawings.html">Drawings</a></li>
+            <li><a href="games.html">Games</a></li>
+            <li><a href="about.html">About</a></li>
+
+        </ul>
+    </nav>
+
+</div>
+
+
+    <!--footer-->
+<footer>
+        <span>© Designed & Coded by Wenhui Zhao</span>
+</footer>
+
+<!--cursor-->
+    <div id="cursor"></div>
+
+</div>
+
+
+<!--aos init-->
+<script>
+    AOS.init({
+        // detect reduce motion here to stop AOS
+        disable: function () {
+            const query = '(prefers-reduced-motion: reduce)';
+            const hasOSReducedMotion = window.matchMedia(query).matches;
+            if(hasOSReducedMotion) return true;
+        }
+    });
+</script>
+
+<script>
+
+
+    // sound control
+    $("#sound_on").click(function () {
+        $("audio").get(0).pause();
+        $("#sound_off").toggle();
+        $("#sound_on").toggle();
+    });
+
+    $("#sound_off").click(function () {
+        $("audio").get(0).load();
+        $("#sound_off").toggle();
+        $("#sound_on").toggle();
+    });
+
+    const cursor = document.querySelector('#cursor');
+
+    const editCursor = e => {
+        const { clientX: x, clientY: y } = e;
+        cursor.style.left = x + 'px';
+        cursor.style.top = y + 'px';
+    };
+
+    window.addEventListener('mousemove', editCursor);
+
+
+    $(document).ready(function() {
+        $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+            disableOn: 700,
+            type: 'iframe',
+            mainClass: 'mfp-fade',
+            removalDelay: 160,
+            preloader: false,
+
+            fixedContentPos: false,
+
+            callbacks: {
+                open: function() {
+                    // console.log($("audio"));
+                    $("audio").get(0).pause();
+                    // Will fire when this exact popup is opened
+                    // this - is Magnific Popup object
+                },
+                close: function() {
+                    $("audio").get(0).play();
+                    // Will fire when popup is closed
+                }
+                // e.t.c.
+            }
+        });
+    });
+
+
+</script>
+
+</body>
+
+
+</html>

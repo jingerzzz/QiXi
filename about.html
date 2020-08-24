@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanag+++
+    er.com/gtag/js?id=UA-152420998-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-152420998-1');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wenhui Zhao's Personal Website About</title>
+    <link rel="stylesheet" href="css/html5reset.css" >
+    <link rel="stylesheet" href="css/about.css" >
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" >
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://kit.fontawesome.com/85ffd7a6f1.js" crossorigin="anonymous"></script>
+    <!--    favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="./icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./icon/favicon-16x16.png">
+
+
+    <!--    <link rel="manifest" href="./icon/site.webmanifest">-->
+</head>
+
+<body>
+
+<div class="skipcont"><a href="#skip">Skip to Main Content</a></div>
+
+<!--    navigation bar-->
+
+<div>
+
+    <div id="intro_part">
+        <!--    navigation bar-->
+        <nav data-aos="fade-down"  data-aos-duration="600">
+            <ul>
+                <li><a href="index.html">Projects</a></li>
+                <li><a href="drawings.html">Drawings</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a class="current_page" style="color: rgb(124, 124, 124)">About</a></li>
+            </ul>
+        </nav>
+
+
+        <div class="photo" data-aos="fade-up" data-aos-duration="1200"></div>
+
+        <div class="intro_text" id="skip" data-aos="fade-up" data-aos-duration="1600">
+            <p>Really nice to meet you!</p>
+            <p>I am  <span style="font-weight: 500 " >Wenhui Zhao</span>, a first year master student major in HCI/UX <span style="font-weight: 500;color: #ff4d4d" >Design</span> in University of Michigan School of Information.</p>
+            <p>I am currently doing a <span style="font-weight: 500;color: #ff4d4d" >3+2</span> program founded by Shanghai Jiao Tong University in China and University of Michigan in America.</p>
+            <p>I will be graduating in 2020 for bachelor degree in <span style="font-weight: 500;color: #ff4d4d" >ECE</span> and 2021 for master degree in MSI.</p>
+            <p><span style="font-weight: 500;color: #ff4d4d" >Drawing</span> is one thing I enjoy the most and I learn it by myself. For most of the times, I do sketching and draw characters from games.</p>
+            <p>Yes, I love games, a lot. I have many game consoles, including NS, PS4, Wii, 3DS, PSV, etc. JRPG is one of my favorite game type.!</p>
+            <p>I am a HUGE <span style="font-weight: 500;color: #ff4d4d" >musical fan</span>!</p>
+
+            <div class="resume"><a  href="zhao_wenhui_resume.pdf"><div>Resume</div><div><i class="fas fa-chevron-right"></i></div></a></div>
+
+        </div>
+
+
+        <form class="form-horizontal" data-aos="fade-up" data-aos-duration="1600" action="https://formspree.io/mbjjgelp" method="POST">
+            <fieldset>
+                <legend class="text-center header">Contact Me</legend>
+
+                <div class="form-group">
+                    <label for="fname"><span aria-label="Input your first name">First Name</span></label>
+                    <div>
+                        <input id="fname" name="name" type="text" placeholder="First Name" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="lname"><span aria-label="enter your last name">Last Name</span></label>
+                    <div>
+                        <input id="lname" name="name" type="text" placeholder="Last Name" class="form-control">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email"><span aria-label="input your email">Email</span></label>
+                    <div>
+                        <input id="email" name="email" type="text" placeholder="Email Address" class="form-control">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone"><span aria-label="input your phone">Phone</span></label>
+                    <div>
+                        <input id="phone" name="phone" type="text" placeholder="Phone" class="form-control">
+                    </div>
+                </div>
+
+                <br>
+                <div class="textarea">
+                    <label for="message"><span aria-label="input your message">Message</span></label>
+                    <div>
+                        <textarea class="form-control" id="message" name="message" placeholder="Enter your massage."></textarea>
+                    </div>
+                </div>
+
+                <br>
+                <div class="form-group">
+                    <div>
+                        <button type="submit" class="submit">Submit</button>
+                    </div>
+                </div>
+
+
+                <!--        <p class="form-group">-->
+                <!--            We will be in touch soon!-->
+                <!--        </p>-->
+            </fieldset>
+        </form>
+
+
+        <footer>
+            <span>© 2019 Wenhui Zhao</span>
+        </footer>
+    </div>
+
+
+
+</div>
+
+
+
+
+<!--aos init-->
+<script>
+    AOS.init({
+        // detect reduce motion here to stop AOS
+        disable: function () {
+            const query = '(prefers-reduced-motion: reduce)';
+            const hasOSReducedMotion = window.matchMedia(query).matches;
+            if(hasOSReducedMotion) return true;
+        }
+    });
+</script>
+
+</body>
+</html>
